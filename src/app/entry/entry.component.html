@@ -1,0 +1,18 @@
+<div class="peopleBlock">
+    <button (click)="incrementPeople()">Increment People</button>
+    <div class="number">{{people | async}}</div>
+    <button (click)="decrementPeople()">Decrement People</button>
+</div>
+<br><br><br>
+
+<div>
+    <button (click)="incrementFamily()">Increment Family</button>
+    <div class="number">{{families | async}}</div>
+    <button (click)="decrementFamily()">Decrement Family</button>
+</div>
+<br><br><br>
+
+<div>
+    <button (click)="setPeople()" class="space-between-buttons">SET RANDOM PEOPLE</button>
+    <button (click)="setFamily()">SET RANDOM FAMILY</button>
+</div>

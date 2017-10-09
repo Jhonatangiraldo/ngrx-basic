@@ -1,0 +1,30 @@
+button {
+    background: #708090;
+    border-radius: 2px;
+    width: 130px;
+    height: 30px;
+    box-shadow: 0px 1px 2px 0px;
+    border: 0px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+div button, div div {
+    float: left;
+}
+
+div.number {
+    margin: 10px;
+    border-bottom: 1px solid gray;
+}
+
+.peopleBlock {
+    margin-bottom: 20px;
+    float: center;
+}
+
+.space-between-buttons {
+    margin-right: 30px;
+}
