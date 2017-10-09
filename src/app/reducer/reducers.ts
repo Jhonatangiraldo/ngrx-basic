@@ -17,7 +17,7 @@ export function peopleReducer (state = 0, action) {
         default:
             return state;
     }
-  };
+};
 
 export function familyReducer (state = 0, action) {
     switch (action.type) {
@@ -30,4 +30,6 @@ export function familyReducer (state = 0, action) {
         default:
             return state;
     }
-  };
+};
+
+export const mainReducer: {} = { people: peopleReducer, families: familyReducer };

@@ -1,24 +1,23 @@
-import { peopleReducer, familyReducer } from './reducer/reducers';
+import { mainReducer, peopleReducer, familyReducer } from './reducer/reducers';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { EntryComponent } from './entry/entry.component';
-import { BackendService } from './backend.service';
+import { ChangeInformationComponent } from './change-information/change-information.component';
 import { StoreModule } from '@ngrx/store';
 import { ProgramInformationComponent } from './program-information/program-information.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EntryComponent,
+    ChangeInformationComponent,
     ProgramInformationComponent
   ],
   imports: [
     BrowserModule,
-    StoreModule.forRoot({people: peopleReducer, families: familyReducer})
+    StoreModule.forRoot(mainReducer)
   ],
-  providers: [BackendService ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

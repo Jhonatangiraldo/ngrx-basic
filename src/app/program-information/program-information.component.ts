@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProgramInformationComponent implements OnInit {
 
-  families: any;
-  people: any;
+  private families: any;
+  private people: any;
 
   constructor(private store:Store<any>,) {
     this.families = this.store.select('families');

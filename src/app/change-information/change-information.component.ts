@@ -1,37 +1,28 @@
 import { INCREMENTFAMILY, INCREMENTPEOPLE, DECREMENTPEOPLE, DECREMENTFAMILY, SETFAMILY, SETPEOPLE } from './../reducer/reducers';
 import { Component, OnInit } from '@angular/core';
-import { BackendService } from './../backend.service';
 import { Store } from '@ngrx/store';
 
 @Component({
-  selector: 'app-entry',
-  templateUrl: './entry.component.html',
-  styleUrls: ['./entry.component.css']
+  selector: 'app-change-information',
+  templateUrl: './change-information.component.html',
+  styleUrls: ['./change-information.component.css']
 })
-export class EntryComponent implements OnInit {
+export class ChangeInformationComponent {
 
-  people: any;
-  families: any;
+  private people: any;
+  private families: any;
 
-  constructor(private store:Store<any>,
-    public backendService: BackendService){
+  constructor( private store:Store<any> ) {
     this.families = this.store.select('families');
     this.people = this.store.select('people');
-
-  }
-
-  ngOnInit() {
-    this.backendService.getData().subscribe( result => {
-      console.log(result);
-    });
   }
 
   incrementPeople(){
-    this.store.dispatch({ type: INCREMENTPEOPLE, payload: 999});
+    this.store.dispatch({ type: INCREMENTPEOPLE});
   }
 
   decrementPeople() {
-    this.store.dispatch({ type: DECREMENTPEOPLE, payload: 999});
+    this.store.dispatch({ type: DECREMENTPEOPLE});
   }
 
   setPeople() {
@@ -40,11 +31,11 @@ export class EntryComponent implements OnInit {
   }
 
   incrementFamily(){
-    this.store.dispatch({ type: INCREMENTFAMILY, payload: 999});
+    this.store.dispatch({ type: INCREMENTFAMILY});
   }
 
   decrementFamily() {
-    this.store.dispatch({ type: DECREMENTFAMILY, payload: 999});
+    this.store.dispatch({ type: DECREMENTFAMILY});
   }
 
   setFamily() {
