@@ -1,3 +1,18 @@
 .wrap-change-information {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
+
+.fixed-position {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+.flex-box-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
